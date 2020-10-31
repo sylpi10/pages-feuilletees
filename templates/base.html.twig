@@ -2,11 +2,46 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Pages Feuilletées{% endblock %}</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> #}
+        <link rel="stylesheet" href="{{asset('css/style.css')}}">
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        <aside>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Accueil</a>
+                    </li>
+                    <li>
+                        <a href="#">Pages Feuilletées</a>
+                    </li>
+                    <li>
+                        <a href="#">Mémoires de mon Père</a>
+                    </li>
+                    <li>
+                        <a href="#">Poèmes de mon Oncle</a>
+                    </li>
+                    <li>
+                        <a href="#">JB Rouvière</a>
+                    </li>
+                    <li>
+                        <a href="#">Mes liens favoris</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+               
+                </ul>
+            </nav>
+        </aside>
+        <div class="container">
+            <h1> {% block pageTitle %}{% endblock %} </h1>
+            {% block body %}{% endblock %}
+        </div>
+
         {% block javascripts %}{% endblock %}
     </body>
 </html>
