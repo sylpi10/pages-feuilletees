@@ -1,0 +1,107 @@
+body{
+    display: flex;
+}
+hr{
+    border-top: solid 1px #ccc;
+    border-bottom: none;
+    width: 50%;
+    margin: 20px auto;
+}
+figcaption{
+    font-size: 0.9rem;
+}
+.container{
+    width: 74%;
+    margin: auto;
+    background-color: rgb(226, 236, 236);
+    padding: 20px;
+    margin-top: 0;
+    h2{
+        text-align: center;
+    }
+}
+
+nav{
+    background-color: navy;
+    position: fixed;
+    color: #fff;
+    width: 150px;
+    padding: 20px;
+    ul>li{
+        list-style-type: none;
+        margin: 20px auto;
+        margin-left: -30px;
+    }
+    a{
+        color: #fff;
+        text-decoration: none;
+        &:hover{
+            color:#ccc;
+        }
+    }
+}
+
+.home-descri{
+    text-align: center;
+    p{
+        width: 70%;
+        margin: 20px auto ;
+        line-height: 26px;
+    }
+}
+.home-paints{
+    border: solid 1px #ccc;
+    margin-top: 30px;
+    img{
+        margin: 12px;
+    }
+}
+
+
+//souvenirs page
+.houses-pics, .street-pics{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    figure{
+        width: 44%;
+    }
+    figcaption{
+        // width: 50%;
+    }
+}
+
+.annotation{
+    font-size: 0.8rem;
+    text-align: left !important;
+    font-style: italic;
+}
+
+/** rouviere*/
+
+.rouviere{
+    p{
+        text-align: left;
+    }
+    span {
+        text-decoration: underline;
+        margin-bottom: 16px;
+    }
+}
+
+/* links page*/
+.fav-links{
+    width: 50%;
+    margin: auto;
+    min-width: 400px;
+    ul{
+        list-style-type: none;
+        text-align: center;
+        li{
+            margin: 20px;
+        }
+        a{
+            margin: 12px;
+        }
+    }
+}

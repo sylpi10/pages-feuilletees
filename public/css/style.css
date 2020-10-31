@@ -1,0 +1,83 @@
+body {
+  display: flex; }
+
+hr {
+  border-top: solid 1px #ccc;
+  border-bottom: none;
+  width: 50%;
+  margin: 20px auto; }
+
+figcaption {
+  font-size: 0.9rem; }
+
+.container {
+  width: 74%;
+  margin: auto;
+  background-color: #e2ecec;
+  padding: 20px;
+  margin-top: 0; }
+  .container h2 {
+    text-align: center; }
+
+nav {
+  background-color: navy;
+  position: fixed;
+  color: #fff;
+  width: 150px;
+  padding: 20px; }
+  nav ul > li {
+    list-style-type: none;
+    margin: 20px auto;
+    margin-left: -30px; }
+  nav a {
+    color: #fff;
+    text-decoration: none; }
+    nav a:hover {
+      color: #ccc; }
+
+.home-descri {
+  text-align: center; }
+  .home-descri p {
+    width: 70%;
+    margin: 20px auto;
+    line-height: 26px; }
+
+.home-paints {
+  border: solid 1px #ccc;
+  margin-top: 30px; }
+  .home-paints img {
+    margin: 12px; }
+
+.houses-pics, .street-pics {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .houses-pics figure, .street-pics figure {
+    width: 44%; }
+
+.annotation {
+  font-size: 0.8rem;
+  text-align: left !important;
+  font-style: italic; }
+
+/** rouviere*/
+.rouviere p {
+  text-align: left; }
+.rouviere span {
+  text-decoration: underline;
+  margin-bottom: 16px; }
+
+/* links page*/
+.fav-links {
+  width: 50%;
+  margin: auto;
+  min-width: 400px; }
+  .fav-links ul {
+    list-style-type: none;
+    text-align: center; }
+    .fav-links ul li {
+      margin: 20px; }
+    .fav-links ul a {
+      margin: 12px; }
+
+/*# sourceMappingURL=style.css.map */
