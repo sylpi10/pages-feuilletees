@@ -105,3 +105,40 @@ nav{
         }
     }
 }
+
+/*poems*/
+.poems{
+    font-size: 0.9rem;
+    width: 100%;
+    margin: auto;
+    text-align: left;
+}
+.poem-imgs{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.poem-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    .list{
+        border: solid 1px #ccc;
+        padding: 12px;
+    }
+    h3{
+        color: purple;
+    }
+    h4{
+        color: orange
+    }
+}
+.poem-detail{
+    p{
+        width: 400px;
+        margin: auto;
+    }
+}

@@ -6,6 +6,12 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
         {# <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> #}
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
+        <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+    <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -23,9 +29,6 @@
                     </li>
                     <li>
                         <a href="{{path('mémoires')}}">Mémoires de mon Père</a>
-                    </li>
-                    <li>
-                        <a href="#">Poèmes de mon Oncle</a>
                     </li>
                     <li>
                         <a href="{{path('souvenirs')}}">Souvenirs de ma mère</a>

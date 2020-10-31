@@ -28,6 +28,15 @@ class GlobalController extends AbstractController
         ]);
     }
     /**
+     * @Route("/poème", name="poeme")
+     */
+    public function poeme(): Response
+    {
+        return $this->render('global/poem-detail.html.twig', [
+           
+        ]);
+    }
+    /**
      * @Route("/souvenirs", name="souvenirs")
      */
     public function souvenirs(): Response
@@ -45,6 +54,15 @@ class GlobalController extends AbstractController
            
         ]);
     }
+    /** 
+     * @Route("/page", name="page-detail")
+     */
+    public function page(): Response
+    {
+        return $this->render('global/page-detail.html.twig', [
+           
+        ]);
+    }
 
     /**
      * @Route("/mémoires", name="mémoires")
@@ -52,6 +70,15 @@ class GlobalController extends AbstractController
     public function memoires(): Response
     {
         return $this->render('global/mémoires.html.twig', [
+           
+        ]);
+    }
+    /**
+     * @Route("/mémoire", name="mémoire-detail")
+     */
+    public function memoire(): Response
+    {
+        return $this->render('global/mémoire-detail.html.twig', [
            
         ]);
     }

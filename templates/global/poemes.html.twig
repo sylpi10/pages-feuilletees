@@ -2,15 +2,66 @@
 
 {% block title %}Poèmes{% endblock %}
 
-{% block pageTitle %} POèmes.{% endblock %}
+{% block pageTitle %} Poèmes.{% endblock %}
 {% block body %}
 
+<h2>Œuvres de Michel Guimbal (1918-2005)</h2>
 
 <hr>
 
-<div class="home-descri">
+<div class="home-descri poems">
     
-    <p>copy text from liens </p>
+    <p>
+        * "Deux voyageurs des grandes eaux" (Le signe de Jonas. La passion de saint Noé), contes bibliques, éditions du Cerf, 1989, 128 pages.
+        Ouvrage couronné par l'Académie française en 1990 :
+        <a href="http://www.editionsducerf.fr/html/fiche/fichelivre.asp?n_liv_cerf=4877 ">Lien</a>
+    </p>
+
+    <p>
+        * "Le pêcheur de songes, et autres contes presque orientaux" (Le pêcheur de songes; Le chemin de l'immortalité; L'arbre; et en appendice: La merveilleuse histoire du dragon délicat), éditons de l'Estocade, 1997, 110 pages 
+    </p>
+    <p>
+        *  " Sur la Flûte fêlée " <br>
+        a reçu le prix Tristan Derème en 2000. <br>
+        « Louis Nucéra disait qu’il y a des gens qui aboient, et qu’il y en a d’autres qui font honnêtement ce qu’ils savent faire. Le lauréat 2000 du prix Derème appartient à cette dernière catégorie. Âgé de plus de 80 ans, Michel Guimbal, habitant au cœur français de la France, près de Tours, a toujours su comprendre la grandeur qu’il y avait à suivre la leçon aimable du renaissant et encore un peu médiéval Marot, et de tous les Marots, pleins de cabrioles et de sagesse, de la Création. Et c’est ainsi qu’il s’est trouvé tout proche de Tristan Derème sans s’en douter. Au quotidien, d’ailleurs, Michel Guimbal semble être de ces lettrés à la souriante lucidité, non dénués d’humour mais toujours dénués d’ironie. <br>
+        (…)Un pur bonheur de poète. Et une pure chance pour le jury d’avoir rencontré ce poète-ci à qui nul, ou presque, jusqu’ici n’avait guère pensé à venir ». <br>
+        (Daniel Aranjo, secrétaire du prix Derème)
+    </p>
+    <p>
+        * "Mon beau navire, ô ma mémoire... Poèmes d'une vie (choix)" <br>
+        imprimé à Tours en 2001, ouvrage couronné par l'Académie française en 2002. <br>
+        Sur ce site, j'ai repris la structure de ce livre et une partie des poèmes, auxquels j'ai ajouté d'autres poèmes inédits. 
+    </p>
+    <p>
+         
+
+Michel Guimbal a laissé une œuvre beaucoup plus importante, poèmes en vers ou en prose, contes etc., qui attendent un éditeur.
+    </p>
+
+    <div class="poem-imgs">
+        <img src="{{asset('images/poemes/michelenfant.jpeg')}}" alt="Enfant" height="200">
+        <img src="{{asset('images/poemes/michelado.jpeg')}}" alt="Enfant" height="200">
+        <img src="{{asset('images/poemes/image002.jpg')}}" alt="Jeune homme" height="200">
+        <img src="{{asset('images/poemes/image004.jpg')}}" alt="Homme agé" height="200">
+    </div>
+
+    <hr>
+
+    <div class="poem-list">
+        <div class="list">
+            <h3> poem Category</h3>
+            <h4> <a href="{{path('poeme')}}">poem title (link to detail)</a></h4>
+        </div>
+        <div class="list">
+            <h3> poem Category</h3>
+            <h4>poem title (link to detail)</h4>
+        </div>
+        <div class="list">
+            <h3> poem Category</h3>
+            <h4>poem title (link to detail)</h4>
+        </div>
+    </div>
+        
 </div>
 
 
