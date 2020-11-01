@@ -12,8 +12,9 @@
 <hr>
 
 <div class="home-descri">
-    
-    <h4> <a href="{{path('page-detail')}}">article title (link to detail)</a></h4>
+    {% for article in articles %}
+        <h3><a href="{{path('page-detail', {'id' : article.id})}}">{{article.name}}</a>, Par {{article.author}}</h3>
+    {% endfor %}
 </div>
 
 

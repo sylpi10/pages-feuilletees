@@ -49,17 +49,16 @@ Michel Guimbal a laissé une œuvre beaucoup plus importante, poèmes en vers ou
 
     <div class="poem-list">
         <div class="list">
-            <h3> poem Category</h3>
-            <h4> <a href="{{path('poeme')}}">poem title (link to detail)</a></h4>
+                
+                {% for categ in categs %}
+               <h2> {{categ.title}} </h2>
+                {% for poem in categ.poems %}
+                <h3> <a href="{{path('poeme', {'id' : poem.id})}}"> {{poem.title}} </a></h3>
+               {% endfor %}
+               <hr>
+            {% endfor %}
         </div>
-        <div class="list">
-            <h3> poem Category</h3>
-            <h4>poem title (link to detail)</h4>
-        </div>
-        <div class="list">
-            <h3> poem Category</h3>
-            <h4>poem title (link to detail)</h4>
-        </div>
+      
     </div>
         
 </div>

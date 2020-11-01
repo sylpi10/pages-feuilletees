@@ -2,15 +2,14 @@
 
 {% block title %}detail{% endblock %}
 
-{% block pageTitle %}article title{% endblock %}
+{% block pageTitle %}{{memorie.title}}{% endblock %}
 {% block body %}
 
 
 <hr>
 
 <div class="home-descri">
-    
-    <p>text</p>
+    <p>{{memorie.content|raw}}</p>
 </div>
 
 

@@ -2,6 +2,14 @@
 
 namespace App\Controller;
 
+use App\Entity\Article;
+use App\Entity\Memories;
+use App\Entity\Poem;
+use App\Entity\PoemCategory;
+use App\Repository\ArticleRepository;
+use App\Repository\MemoriesRepository;
+use App\Repository\PoemCategoryRepository;
+use App\Repository\PoemRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -21,19 +29,22 @@ class GlobalController extends AbstractController
     /**
      * @Route("/poèmes", name="poemes")
      */
-    public function poemes(): Response
+    public function poemes(PoemRepository $poemrepo, PoemCategoryRepository $categrepo): Response
     {
+        $poems = $poemrepo->findAll();
+        $categs = $categrepo->findAll();
         return $this->render('global/poemes.html.twig', [
-           
+           'poems' => $poems,
+           'categs' => $categs
         ]);
     }
     /**
-     * @Route("/poème", name="poeme")
+     * @Route("/poème/{id}", name="poeme")
      */
-    public function poeme(): Response
+    public function poeme(Poem $poem ): Response
     {
         return $this->render('global/poem-detail.html.twig', [
-           
+           'poem' => $poem
         ]);
     }
     /**
@@ -48,38 +59,40 @@ class GlobalController extends AbstractController
     /**
      * @Route("/pages", name="pages-feuilletées")
      */
-    public function pages(): Response
+    public function pages(ArticleRepository $articleRepo): Response
     {
+        $articles = $articleRepo->findAll();
         return $this->render('global/pages.html.twig', [
-           
+           'articles' => $articles
         ]);
     }
     /** 
-     * @Route("/page", name="page-detail")
+     * @Route("/page/{id}", name="page-detail")
      */
-    public function page(): Response
+    public function page(Article $article): Response
     {
         return $this->render('global/page-detail.html.twig', [
-           
+           'article' => $article
         ]);
     }
 
     /**
      * @Route("/mémoires", name="mémoires")
      */
-    public function memoires(): Response
+    public function memoires(MemoriesRepository $memorepo): Response
     {
+        $memories = $memorepo->findBy([], ['chapter'=> 'ASC']);
         return $this->render('global/mémoires.html.twig', [
-           
+           'memories' => $memories
         ]);
     }
     /**
-     * @Route("/mémoire", name="mémoire-detail")
+     * @Route("/mémoire/{id}", name="memoire-detail")
      */
-    public function memoire(): Response
+    public function memoire(Memories $memories): Response
     {
         return $this->render('global/mémoire-detail.html.twig', [
-           
+           'memorie' => $memories
         ]);
     }
     /**
