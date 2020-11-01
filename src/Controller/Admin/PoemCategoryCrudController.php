@@ -21,7 +21,7 @@ class PoemCategoryCrudController extends AbstractCrudController
         return $crud
             ->setPageTitle('index', 'Catégorie de Poème')
             ->setPageTitle('edit', 'Modifier Une Catégorie')
-        ;
+            ;
     }
 
     public function configureFields(string $pageName): iterable
@@ -52,6 +52,7 @@ class PoemCategoryCrudController extends AbstractCrudController
             ->update(Crud::PAGE_EDIT, Action::SAVE_AND_RETURN, function (Action $action) {
                 return $action->setIcon('fa fa-check')->setLabel('Enregister');
             })
+      
     
             // in PHP 7.4 and newer you can use arrow functions
             // ->update(Crud::PAGE_INDEX, Action::NEW,
