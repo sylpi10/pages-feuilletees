@@ -1,5 +1,9 @@
 body{
     display: flex;
+    font-family: 'Montserrat';
+    h1, h2, h3, h4{
+        font-family: 'Raleway', 'Times New Roman', serif;
+    }
 }
 hr{
     border-top: solid 1px #ccc;
@@ -8,7 +12,8 @@ hr{
     margin: 20px auto;
 }
 figcaption{
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+    font-style: italic;
 }
 .container{
     width: 74%;
