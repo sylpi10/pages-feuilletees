@@ -5,15 +5,19 @@
 {% block pageTitle %} Pages feuilletées ! {% endblock %}
 {% block body %}
 
-
-
-<h2>Chroniques réalisées en 1994 et 1995 sur Radio Eaux Vives Lozère, maintenant rattachée à RCF. En notes, les commentaires 2010.       </h2>
-
 <hr>
 
 <div class="home-descri">
-    
-    <h4> <a href="{{path('page-detail')}}">article title (link to detail)</a></h4>
+
+    <h2>Chroniques réalisées en 1994 et 1995 sur Radio Eaux Vives Lozère, <br>
+         maintenant rattachée à RCF. En notes, les commentaires 2010.      
+    </h2>
+
+    <div class="articles-title-list">
+        {% for article in articles %}
+        <h3><a href="{{path('page-detail', {'id' : article.id})}}">{{article.name}}</a>, Par {{article.author}}</h3>
+        {% endfor %}
+    </div>
 </div>
 
 

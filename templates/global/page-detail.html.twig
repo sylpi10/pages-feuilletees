@@ -2,18 +2,15 @@
 
 {% block title %}Détail{% endblock %}
 
-{% block pageTitle %} Détail{% endblock %}
+{% block pageTitle %} {{article.name}}{% endblock %}
 {% block body %}
 
-
-
-<h2>Article title</h2>
-
+<hr>
+    <h2>Par {{article.author}} <span>{{article.details}}</span></h2>
 <hr>
 
-<div class="home-descri">
-    
-    <p>article text</p>
+<div class="home-descri page-detail">
+    <p>{{article.content|raw}}</p>
 </div>
 
 

@@ -1,17 +1,16 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}detail{% endblock %}
+{% block title %}Mémoires{% endblock %}
 
-{% block pageTitle %}article title{% endblock %}
+{% block pageTitle %}{{memorie.title}}{% endblock %}
 {% block body %}
-
 
 <hr>
 
-<div class="home-descri">
-    
-    <p>text</p>
+<div class="home-descri wrapper">
+    <div class="memoire-text">
+        <p>{{memorie.content|raw}}</p>
+    </div>
 </div>
-
 
 {% endblock %}
