@@ -1,8 +1,18 @@
+@charset "UTF-8";
+/* general*/
 body {
   display: flex;
-  font-family: 'Montserrat'; }
-  body h1, body h2, body h3, body h4 {
+  font-family: 'Montserrat';
+  margin: 0;
+  padding: 0;
+  background-color: rgba(204, 175, 127, 0.6); }
+  body h2, body h3, body h4 {
     font-family: 'Raleway', 'Times New Roman', serif; }
+  body h1 {
+    margin-left: 10%;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    margin-bottom: 50px; }
 
 hr {
   border-top: solid 1px #ccc;
@@ -17,17 +27,16 @@ figcaption {
 .container {
   width: 74%;
   margin: auto;
-  background-color: #e2ecec;
   padding: 20px;
-  margin-top: 0; }
+  margin-top: 20px; }
   .container h2 {
     text-align: center; }
 
 nav {
-  background-color: navy;
+  background-color: #14144b;
   position: fixed;
   color: #fff;
-  width: 150px;
+  width: 170px;
   padding: 20px; }
   nav ul > li {
     list-style-type: none;
@@ -38,7 +47,14 @@ nav {
     text-decoration: none; }
     nav a:hover {
       color: #ccc; }
+  nav #burger {
+    display: none;
+    float: right; }
+    nav #burger:hover {
+      cursor: pointer;
+      color: orange; }
 
+/*home page*/
 .home-descri {
   text-align: center; }
   .home-descri p {
@@ -46,11 +62,84 @@ nav {
     margin: 20px auto;
     line-height: 26px; }
 
+.home-hero {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+  align-items: center; }
+  .home-hero p {
+    width: 40%; }
+
+@media screen and (max-width: 1230px) {
+  .home-hero p {
+    width: 100%; } }
 .home-paints {
   border: solid 1px #ccc;
   margin-top: 30px; }
   .home-paints img {
     margin: 12px; }
+
+/*page feuilletées*/
+.articles-title-list {
+  width: 74%;
+  margin: 50px auto;
+  padding: 30px;
+  border: solid 1px #aaa;
+  border-radius: 10px; }
+  .articles-title-list h3 {
+    text-align: left;
+    margin: 20px auto; }
+
+.page-detail {
+  width: 80%;
+  margin: auto; }
+
+/*poeme list*/
+.poems {
+  font-size: 0.9rem;
+  width: 80%;
+  margin: auto;
+  text-align: left; }
+
+.poem-imgs {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+
+.poem-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center; }
+  .poem-list .list {
+    border: solid 1px #ccc;
+    padding: 12px;
+    width: 40%;
+    min-width: 360px;
+    margin: 20px auto; }
+  .poem-list h3 {
+    color: #640764; }
+
+.poem-detail p {
+  width: 400px;
+  margin: auto; }
+
+/*memoirs*/
+.chapter-list {
+  border: solid 1px #ccc;
+  border-radius: 12px;
+  width: 64%;
+  padding: 26px;
+  margin: auto;
+  min-width: 340px; }
+
+.memoire-text {
+  width: 74%;
+  margin: 40px auto; }
 
 .houses-pics, .street-pics {
   display: flex;
@@ -58,6 +147,10 @@ nav {
   flex-wrap: wrap; }
   .houses-pics figure, .street-pics figure {
     width: 44%; }
+
+.souvenirs-wrap figcaption {
+  width: 400px;
+  margin: auto; }
 
 .annotation {
   font-size: 0.8rem;
@@ -83,36 +176,5 @@ nav {
       margin: 20px; }
     .fav-links ul a {
       margin: 12px; }
-
-/*poems*/
-.poems {
-  font-size: 0.9rem;
-  width: 100%;
-  margin: auto;
-  text-align: left; }
-
-.poem-imgs {
-  width: 80%;
-  margin: auto;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap; }
-
-.poem-list {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center; }
-  .poem-list .list {
-    border: solid 1px #ccc;
-    padding: 12px; }
-  .poem-list h3 {
-    color: purple; }
-  .poem-list h4 {
-    color: orange; }
-
-.poem-detail p {
-  width: 400px;
-  margin: auto; }
 
 /*# sourceMappingURL=style.css.map */

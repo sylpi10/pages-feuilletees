@@ -7,16 +7,26 @@
 
 <h2>Œuvres de Michel Guimbal (1918-2005)</h2>
 
-<hr>
-
 <div class="home-descri poems">
-    
-    <p>
-        * "Deux voyageurs des grandes eaux" (Le signe de Jonas. La passion de saint Noé), contes bibliques, éditions du Cerf, 1989, 128 pages.
+
+    <div class="poem-list">
+        {% for categ in categs %}
+            <div class="list">
+               <h3> {{categ.title}} </h3>
+                {% for poem in categ.poems %}
+                <h4> <a href="{{path('poeme', {'id' : poem.id})}}"> {{poem.title}} </a></h4>
+               {% endfor %}
+            </div>
+            {% endfor %}
+    </div>
+    <div class="">
+
+        <p>
+            * "Deux voyageurs des grandes eaux" (Le signe de Jonas. La passion de saint Noé), contes bibliques, éditions du Cerf, 1989, 128 pages.
         Ouvrage couronné par l'Académie française en 1990 :
         <a href="http://www.editionsducerf.fr/html/fiche/fichelivre.asp?n_liv_cerf=4877 ">Lien</a>
     </p>
-
+    
     <p>
         * "Le pêcheur de songes, et autres contes presque orientaux" (Le pêcheur de songes; Le chemin de l'immortalité; L'arbre; et en appendice: La merveilleuse histoire du dragon délicat), éditons de l'Estocade, 1997, 110 pages 
     </p>
@@ -33,34 +43,21 @@
         Sur ce site, j'ai repris la structure de ce livre et une partie des poèmes, auxquels j'ai ajouté d'autres poèmes inédits. 
     </p>
     <p>
-         
-
-Michel Guimbal a laissé une œuvre beaucoup plus importante, poèmes en vers ou en prose, contes etc., qui attendent un éditeur.
+        
+        
+        Michel Guimbal a laissé une œuvre beaucoup plus importante, poèmes en vers ou en prose, contes etc., qui attendent un éditeur.
     </p>
-
+</div>
+    
     <div class="poem-imgs">
         <img src="{{asset('images/poemes/michelenfant.jpeg')}}" alt="Enfant" height="200">
         <img src="{{asset('images/poemes/michelado.jpeg')}}" alt="Enfant" height="200">
         <img src="{{asset('images/poemes/image002.jpg')}}" alt="Jeune homme" height="200">
         <img src="{{asset('images/poemes/image004.jpg')}}" alt="Homme agé" height="200">
     </div>
-
+    
     <hr>
-
-    <div class="poem-list">
-        <div class="list">
-                
-                {% for categ in categs %}
-               <h2> {{categ.title}} </h2>
-                {% for poem in categ.poems %}
-                <h3> <a href="{{path('poeme', {'id' : poem.id})}}"> {{poem.title}} </a></h3>
-               {% endfor %}
-               <hr>
-            {% endfor %}
-        </div>
-      
-    </div>
-        
+    
 </div>
 
 
