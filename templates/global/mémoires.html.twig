@@ -2,22 +2,20 @@
 
 {% block title %}Pages feuilletées{% endblock %}
 
-{% block pageTitle %} LES MÉMOIRES DE MON PÈRE, JEAN NURDIN {% endblock %}
+{% block pageTitle %} Les Mémoires de mon Père, JEAN NURDIN {% endblock %}
 {% block body %}
 
-<hr>
-
-<div class="home-descri">
-    <div class="home-descri">
+<div class="home-descri wrapper">
+    <div class="chapter-list">
         {% for memo in memories %}
-
-            <h3><a href="{{path('memoire-detail', {'id' : memo.id})}}">
-                {% if memo.chapter < 1 %}
-                {{memo.title}}</a></h3>
-                {% else %}
+                <h3><a href="{{path('memoire-detail', {'id' : memo.id})}}">
+                    
+                    {% if memo.chapter < 1 %}
+                    {{memo.title}}</a></h3>
+                    {% else %}
                     Chapitre {{memo.chapter}}: {{memo.title}}</a></h3>
-                {% endif %}
-        {% endfor %}
+                    {% endif %}
+                    {% endfor %}
     </div>
 </div>
 
