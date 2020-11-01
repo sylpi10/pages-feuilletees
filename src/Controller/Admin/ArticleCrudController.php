@@ -22,6 +22,7 @@ class ArticleCrudController extends AbstractCrudController
         return $crud
             ->setPageTitle('index', 'Articles')
             ->setPageTitle('edit', 'Modifier Un Article')
+            ->setPageTitle('new', 'Créer Un Article')
         ;
     }
 
@@ -64,11 +65,16 @@ class ArticleCrudController extends AbstractCrudController
                 return $action->setIcon('fa fa-pencil')->setLabel('Modifier');
             })
       
-        
             ->update(Crud::PAGE_INDEX, Action::DELETE, function (Action $action) {
                 return $action->setIcon('fa fa-times')->setLabel('Supprimer');
             })
     
+            ->update(Crud::PAGE_NEW, Action::SAVE_AND_ADD_ANOTHER, function (Action $action) {
+                return $action->setIcon('fa fa-plus')->setLabel('Sauver et Créer un autre');
+            })
+            ->update(Crud::PAGE_NEW, Action::SAVE_AND_RETURN, function (Action $action) {
+                return $action->setIcon('fa fa-check')->setLabel('Valider');
+            })
             // in PHP 7.4 and newer you can use arrow functions
             // ->update(Crud::PAGE_INDEX, Action::NEW,
             //     fn (Action $action) => $action->setIcon('fa fa-file-alt')->setLabel(false))

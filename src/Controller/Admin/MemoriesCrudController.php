@@ -23,6 +23,7 @@ class MemoriesCrudController extends AbstractCrudController
         return $crud
             ->setPageTitle('index', 'Mémoires')
             ->setPageTitle('edit', 'Modifier un Chapitre')
+            ->setPageTitle('new', 'Ajouter un Chapitre')
         ;
     }
 
@@ -55,6 +56,12 @@ class MemoriesCrudController extends AbstractCrudController
             })
             ->update(Crud::PAGE_EDIT, Action::SAVE_AND_RETURN, function (Action $action) {
                 return $action->setIcon('fa fa-check')->setLabel('Enregister');
+            })
+            ->update(Crud::PAGE_NEW, Action::SAVE_AND_ADD_ANOTHER, function (Action $action) {
+                return $action->setIcon('fa fa-plus')->setLabel('Sauver et Créer un autre');
+            })
+            ->update(Crud::PAGE_NEW, Action::SAVE_AND_RETURN, function (Action $action) {
+                return $action->setIcon('fa fa-check')->setLabel('Valider');
             })
             // in PHP 7.4 and newer you can use arrow functions
             // ->update(Crud::PAGE_INDEX, Action::NEW,

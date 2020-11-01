@@ -21,6 +21,7 @@ class PoemCategoryCrudController extends AbstractCrudController
         return $crud
             ->setPageTitle('index', 'Catégorie de Poème')
             ->setPageTitle('edit', 'Modifier Une Catégorie')
+            ->setPageTitle('new', 'Créer Une Catégorie')
             ;
     }
 
@@ -51,6 +52,13 @@ class PoemCategoryCrudController extends AbstractCrudController
             })
             ->update(Crud::PAGE_EDIT, Action::SAVE_AND_RETURN, function (Action $action) {
                 return $action->setIcon('fa fa-check')->setLabel('Enregister');
+            })
+
+            ->update(Crud::PAGE_NEW, Action::SAVE_AND_ADD_ANOTHER, function (Action $action) {
+                return $action->setIcon('fa fa-plus')->setLabel('Sauver et Créer un autre');
+            })
+            ->update(Crud::PAGE_NEW, Action::SAVE_AND_RETURN, function (Action $action) {
+                return $action->setIcon('fa fa-check')->setLabel('Valider');
             })
       
     
