@@ -5,15 +5,28 @@ body {
   font-family: 'Montserrat';
   margin: 0;
   padding: 0;
-  background-color: rgba(204, 175, 127, 0.6); }
+  background-color: rgba(204, 175, 127, 0.7); }
   body h2, body h3, body h4 {
-    font-family: 'Raleway', 'Times New Roman', serif; }
+    font-family: 'Raleway', 'Times New Roman', serif;
+    color: #14144b; }
   body h1 {
-    margin-left: 10%;
     font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-    margin-bottom: 50px; }
+    font-size: 3.3rem;
+    margin-bottom: 50px;
+    padding: 12px;
+    color: #14144b; }
 
+#main-title {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  #main-title img {
+    width: 400px;
+    opacity: .6; }
+
+@media screen and (max-width: 1000px) {
+  #main-title img {
+    display: none; } }
 hr {
   border-top: solid 1px #ccc;
   border-bottom: none;
@@ -28,7 +41,8 @@ figcaption {
   width: 74%;
   margin: auto;
   padding: 20px;
-  margin-top: 20px; }
+  margin-top: 20px;
+  margin-bottom: 80px; }
   .container h2 {
     text-align: center; }
 
@@ -37,16 +51,19 @@ nav {
   position: fixed;
   color: #fff;
   width: 170px;
-  padding: 20px; }
-  nav ul > li {
-    list-style-type: none;
-    margin: 20px auto;
-    margin-left: -30px; }
-  nav a {
-    color: #fff;
-    text-decoration: none; }
-    nav a:hover {
-      color: #ccc; }
+  padding: 20px;
+  height: auto; }
+  nav ul {
+    transition: all .6s ease; }
+    nav ul li {
+      list-style-type: none;
+      margin: 20px auto;
+      margin-left: -30px; }
+      nav ul li a {
+        color: #fff;
+        text-decoration: none; }
+        nav ul li a:hover {
+          color: #ccc; }
   nav #burger {
     display: none;
     float: right; }
@@ -55,26 +72,36 @@ nav {
       color: orange; }
 
 /*home page*/
-.home-descri {
+.wrapper {
   text-align: center; }
-  .home-descri p {
+  .wrapper p {
     width: 70%;
     margin: 20px auto;
     line-height: 26px; }
 
-.home-hero {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 80%;
+.home-wrap-hero {
+  width: 100%;
+  height: 600px;
   margin: auto;
-  align-items: center; }
-  .home-hero p {
-    width: 40%; }
+  background: url("../images/home/leaves2.jpg") no-repeat center;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end; }
+  .home-wrap-hero p {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    align-self: flex-end;
+    width: 30%;
+    margin-right: 20px;
+    font-size: 1.2rem;
+    border-radius: 10px; }
 
 @media screen and (max-width: 1230px) {
   .home-hero p {
-    width: 100%; } }
+    width: 100%;
+    margin: 20px; } }
 .home-paints {
   border: solid 1px #ccc;
   margin-top: 30px; }
@@ -86,11 +113,31 @@ nav {
   width: 74%;
   margin: 50px auto;
   padding: 30px;
-  border: solid 1px #aaa;
+  background-color: #d6f5da;
   border-radius: 10px; }
-  .articles-title-list h3 {
+  .articles-title-list li {
     text-align: left;
-    margin: 20px auto; }
+    padding-left: 30px;
+    margin: 30px auto;
+    list-style-type: none;
+    font-size: 1.4rem;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    width: 74%; }
+    .articles-title-list li a {
+      text-transform: uppercase;
+      text-decoration: none;
+      background-color: rgba(20, 20, 75, 0.85);
+      border: solid 1px rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      color: #fff;
+      transition: background-color .6s ease; }
+      .articles-title-list li a:hover {
+        color: #14144b;
+        background-color: transparent; }
+    .articles-title-list li span {
+      margin-left: 60px; }
 
 .page-detail {
   width: 80%;
@@ -111,10 +158,18 @@ nav {
   flex-wrap: wrap; }
 
 .poem-list {
+  text-align: center;
+  background-color: #d6f5da;
+  border-radius: 12px;
+  padding: 30px 0;
   display: flex;
   justify-content: space-around;
-  flex-wrap: wrap;
-  text-align: center; }
+  flex-wrap: wrap; }
+  .poem-list ul {
+    list-style-type: none; }
+  .poem-list #ul {
+    margin: auto;
+    text-align: center; }
   .poem-list .list {
     border: solid 1px #ccc;
     padding: 12px;
@@ -122,7 +177,16 @@ nav {
     min-width: 360px;
     margin: 20px auto; }
   .poem-list h3 {
-    color: #640764; }
+    background-color: rgba(20, 20, 75, 0.85);
+    color: #fff;
+    padding: 10px; }
+  .poem-list li {
+    margin-left: -20px; }
+    .poem-list li a {
+      text-transform: uppercase;
+      color: #222252; }
+      .poem-list li a:hover {
+        color: #5a4c4c; }
 
 .poem-detail p {
   width: 400px;
@@ -130,12 +194,33 @@ nav {
 
 /*memoirs*/
 .chapter-list {
-  border: solid 1px #ccc;
   border-radius: 12px;
   width: 64%;
   padding: 26px;
   margin: auto;
-  min-width: 340px; }
+  min-width: 340px;
+  padding: 30px;
+  background-color: #d6f5da;
+  border-radius: 10px; }
+  .chapter-list li {
+    padding-left: 30px;
+    margin: 26px auto;
+    list-style-type: none;
+    font-size: 1.4rem; }
+    .chapter-list li a {
+      text-transform: uppercase;
+      background-color: rgba(20, 20, 75, 0.85);
+      border: solid 1px rgba(20, 20, 75, 0.85);
+      color: #fff;
+      padding: 10px;
+      text-decoration: none;
+      transition: background-color .6s ease; }
+      .chapter-list li a:hover {
+        color: #14144b;
+        background-color: transparent; }
+
+.chapters img {
+  margin-top: 80px; }
 
 .memoire-text {
   width: 74%;
@@ -176,5 +261,16 @@ nav {
       margin: 20px; }
     .fav-links ul a {
       margin: 12px; }
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-width: 360px;
+  margin: auto; }
+  .contact form label {
+    margin: 14px; }
+  .contact form input, .contact form textarea {
+    padding: 10px; }
 
 /*# sourceMappingURL=style.css.map */

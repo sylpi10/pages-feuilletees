@@ -2,19 +2,16 @@
 
 {% block title %}Accueil{% endblock %}
 
-{% block pageTitle %} Bienvenue ! {% endblock %}
+{% block pageTitle %} Bienvenue !     {% endblock %}
 {% block body %}
-
 
 
 <h2>Je vous invite à feuilleter avec moi</h2>
 
-<hr>
-
-<div class="home-descri">
+<main class="wrapper">
     
-    <div class="home-hero">
-        <img src="{{asset('images/home/arbre.jpg')}}" alt="Image d'arbre" width="440">
+    <div class="home-hero home-wrap-hero">
+        {# <img src="{{asset('images/home/arbre.jpg')}}" alt="Image d'arbre" width="440"> #}
 
         <p> 
             Quelques Pages Feuilletées (chroniques radio),
@@ -41,7 +38,7 @@
         Il est aussi ce courant d’air espiègle et imprévu qui fait claquer les portes et envoler les papiers des gens sérieux.
         C’est de ce double parrainage que se réclame la petite Fée qui hante ces lieux, et qui vous salue bien,
     </p>
-</div>
+</main>
 
 
 {% endblock %}

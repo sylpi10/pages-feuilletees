@@ -82,7 +82,7 @@ class GlobalController extends AbstractController
     public function memoires(MemoriesRepository $memorepo): Response
     {
         $memories = $memorepo->findBy([], ['chapter'=> 'ASC']);
-        return $this->render('global/mémoires.html.twig', [
+        return $this->render('global/memoires.html.twig', [
            'memories' => $memories
         ]);
     }
@@ -91,7 +91,7 @@ class GlobalController extends AbstractController
      */
     public function memoire(Memories $memories): Response
     {
-        return $this->render('global/mémoire-detail.html.twig', [
+        return $this->render('global/memoire-detail.html.twig', [
            'memorie' => $memories
         ]);
     }

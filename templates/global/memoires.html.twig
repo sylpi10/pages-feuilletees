@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pages feuilletées{% endblock %}
+
+{% block pageTitle %} Les Mémoires de mon Père, <br> JEAN NURDIN {% endblock %}
+{% block body %}
+
+<main class="wrapper chapters">
+    <div class="chapter-list">
+       <ul>
+            {% for memo in memories %}
+            <li>
+                
+                {% if memo.chapter < 1 %}
+                <a href="{{path('memoire-detail', {'id' : memo.id})}}">
+                    <i class="fas fa-pen-nib"></i> {{memo.title}}</a>
+                    {% else %}
+                <a href="{{path('memoire-detail', {'id' : memo.id})}}">
+                    <i class="fas fa-pen-nib"></i> Chapitre {{memo.chapter}}: {{memo.title}}</a>
+                {% endif %}
+                
+            </li>
+            {% endfor %}
+       </ul>
+    </div>
+
+    <div class="">
+        <img src="{{asset('images/jean.jpg')}}" alt="">
+    </div>
+
+</main>
+
+
+{% endblock %}

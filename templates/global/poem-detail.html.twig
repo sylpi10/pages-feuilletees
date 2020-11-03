@@ -5,11 +5,8 @@
 {% block pageTitle %}{{poem.category}}{% endblock %}
 {% block body %}
 
-<hr>
 
-<div class="home-descri poem-detail">  
-    <img src="{{asset('images/poemes/the.jpg')}}" alt="">
-    <hr>
+<main class="wrapper poem-detail">  
     <h2>{{poem.title}}</h2>
     <p>
         {{poem.content|raw }}
@@ -17,7 +14,7 @@
 
     <p>{{poem.publicationDate}}</p>
         
-</div>
+</main>
 
 
 {% endblock %}

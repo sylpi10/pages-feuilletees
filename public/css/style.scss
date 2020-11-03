@@ -3,18 +3,38 @@ body{
     display: flex;
     font-family: 'Montserrat';
     margin: 0;padding: 0;
-    background-color: rgba(204, 175, 127, .6);
+    // background-image: url("../images/frise2.png");
+    background-color: rgba(204, 175, 127, .7);
 
    h2, h3, h4{
         font-family: 'Raleway', 'Times New Roman', serif;
+        color: rgb(20, 20, 75);
     }
     h1{
-        margin-left: 10%;
+        // margin-left: 10%;
         font-family: 'Dancing Script', cursive;
-        font-size: 3rem;
+        font-size: 3.3rem;
         margin-bottom: 50px;
+        padding: 12px;
+        color: rgb(20, 20, 75);
     }
 }
+
+#main-title{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    img{
+        width: 400px;
+        opacity: .6;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #main-title img{ 
+           display: none;
+    }
+}
+
 hr{
     border-top: solid 1px #ccc;
     border-bottom: none;
@@ -25,11 +45,13 @@ figcaption{
     font-size: 0.8rem;
     font-style: italic;
 }
+
 .container{
     width: 74%;
     margin: auto;
     padding: 20px;
     margin-top: 20px;
+    margin-bottom: 80px;
     h2{
         text-align: center;
     }
@@ -41,18 +63,23 @@ nav{
     color: #fff;
     width: 170px;
     padding: 20px;
-    ul>li{
-        list-style-type: none;
-        margin: 20px auto;
-        margin-left: -30px;
-    }
-    a{
-        color: #fff;
-        text-decoration: none;
-        &:hover{
-            color:#ccc;
+    height: auto;
+    ul{
+        transition: all .6s ease;
+
+        li{
+            list-style-type: none;
+            margin: 20px auto;
+            margin-left: -30px;
+            a{
+                color: #fff;
+                text-decoration: none;
+                &:hover{
+                    color:#ccc;
+            }
         }
     }
+}
     #burger{
         display: none;
         float: right;
@@ -64,7 +91,7 @@ nav{
 }
 
 /*home page*/
-.home-descri{
+.wrapper{
     text-align: center;
     p{
         width: 70%;
@@ -72,21 +99,31 @@ nav{
         line-height: 26px;
     }
 }
-
-.home-hero{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 80%;
+.home-wrap-hero{
+    width: 100%;
+    height: 600px;
     margin: auto;
-    align-items: center;
+    background: url("../images/home/leaves2.jpg") no-repeat center;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
     p{
-        width: 40%;
+        background-color: rgba(255,255,255,.7);
+        padding: 20px;
+        align-self: flex-end;
+        width: 30%;
+        margin-right: 20px;
+        font-size: 1.2rem;
+        border-radius: 10px;
     }
-}  
+}
+
 @media screen and (max-width: 1230px) {
     .home-hero p{
         width: 100%;
+        margin: 20px;
     }
 }
 
@@ -103,11 +140,34 @@ nav{
     width: 74%;
     margin:50px auto;
     padding: 30px;
-    border: solid 1px #aaa;
+    background-color: rgb(214, 245, 218);
     border-radius: 10px;
-    h3{
+    li{
         text-align: left;
-        margin: 20px auto;
+        padding-left: 30px;
+        margin: 30px auto;
+        list-style-type: none;
+        font-size: 1.4rem;
+        height: 80px;
+        display: flex;
+        flex-direction: column;
+        width: 74%;
+        a{
+            text-transform: uppercase;
+            text-decoration: none;
+            background-color: rgba(20, 20, 75, .85);
+            border: solid 1px rgba(0,0,0,.5);
+            padding: 10px 20px;
+            color: #fff;
+            transition: background-color .6s ease;
+            &:hover{
+                color:  rgb(20, 20, 75);
+                background-color: transparent;
+            }
+        }
+        span{
+            margin-left: 60px;
+        }
     }
 }
 .page-detail{
@@ -130,10 +190,21 @@ nav{
     flex-wrap: wrap;
 }
 .poem-list{
+    text-align: center;
+    background-color: rgb(214, 245, 218);
+    border-radius: 12px;
+    padding: 30px 0;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    text-align: center;
+     ul{
+        list-style-type: none;
+    }
+    #ul{
+        margin: auto;
+        text-align: center;
+
+    }
     .list{
         border: solid 1px #ccc;
         padding: 12px;
@@ -142,30 +213,72 @@ nav{
         margin: 20px auto;
     }
     h3{
-        color: rgb(100, 7, 100);
+        background-color: rgba(20, 20, 75, .85);
+        color: #fff;
+        padding: 10px;
+    }
+    li{
+        margin-left: -20px;
+        a{
+            text-transform: uppercase;
+            color: rgb(34, 34, 82);
+            &:hover{
+                color:  rgb(90, 76, 76);
+            }
+        }
     }
 }
 .poem-detail{
     p{
         width: 400px;
         margin: auto;
+     
     }
 }
 
 /*memoirs*/
 .chapter-list{
-    border: solid 1px #ccc;
     border-radius: 12px;
     width: 64%;
     padding:26px;
     margin: auto;
     min-width: 340px;
+    padding: 30px;
+    // border: solid 1px #aaa;
+    background-color: rgb(214, 245, 218);
+    border-radius: 10px;
+    li{
+        padding-left: 30px;
+        margin: 26px auto;
+        list-style-type: none;
+        font-size: 1.4rem;
+
+        a{
+            text-transform: uppercase;
+            background-color: rgba(20, 20, 75, .85);
+            border: solid 1px rgba(20, 20, 75, .85);
+             color: #fff;
+             padding: 10px;
+             text-decoration: none;
+             transition: background-color .6s ease;
+             &:hover{
+                 color:  rgb(20, 20, 75);
+                 background-color: transparent;
+             }
+        }
+    }
+}
+
+.chapters img{
+    margin-top: 80px;
 }
 
 .memoire-text{
     width: 74%;
     margin:40px auto;
+
 }
+
 
 //souvenirs page
 .houses-pics, .street-pics{
@@ -215,6 +328,23 @@ nav{
         a{
             margin: 12px;
         }
+    }
+}
+
+.contact{
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        min-width: 360px;
+        margin: auto;
+        label{
+            margin: 14px;
+        }
+        input, textarea{
+            padding: 10px;
+        }
+        
     }
 }
 

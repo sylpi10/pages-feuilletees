@@ -7,19 +7,23 @@
 
 <h2>Œuvres de Michel Guimbal (1918-2005)</h2>
 
-<div class="home-descri poems">
+<main class="wrapper poems">
 
     <div class="poem-list">
         {% for categ in categs %}
-            <div class="list">
-               <h3> {{categ.title}} </h3>
-                {% for poem in categ.poems %}
-                <h4> <a href="{{path('poeme', {'id' : poem.id})}}"> {{poem.title}} </a></h4>
-               {% endfor %}
-            </div>
-            {% endfor %}
-    </div>
-    <div class="">
+                <div class="list">
+                    <ul id="first">
+                        <li><h3><i class="fas fa-pen-nib"></i> {{categ.title}} </h3></li>
+                        {% for poem in categ.poems %}
+                        <li> <a href="{{path('poeme', {'id' : poem.id})}}"> {{poem.title}} </a></li>
+                        {% endfor %}
+                    </ul>                    
+                </div>
+        {% endfor %}
+        </div>
+
+    <hr>
+        <div class="">
 
         <p>
             * "Deux voyageurs des grandes eaux" (Le signe de Jonas. La passion de saint Noé), contes bibliques, éditions du Cerf, 1989, 128 pages.
@@ -58,7 +62,7 @@
     
     <hr>
     
-</div>
+</main>
 
 
 {% endblock %}
