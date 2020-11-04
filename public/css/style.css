@@ -274,6 +274,10 @@ nav {
       width: 500px; }
       .form form .contact-info input {
         height: 20px; }
+      .form form .contact-info li {
+        color: red; }
+      .form form .contact-info li::marker {
+        display: none; }
     .form form textarea {
       height: 120px; }
     .form form button {
@@ -288,6 +292,13 @@ nav {
         background-color: transparent;
         color: #149ac7;
         cursor: pointer; }
+  .form .alert-success {
+    margin-left: 100px;
+    background-color: #4aa34a;
+    color: #fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 8px; }
 
 .text-detail {
   margin-top: 200px;

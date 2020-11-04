@@ -9,6 +9,11 @@
 
 <div class="wrapper form">
 
+    <div class="index-notif">
+        {% for msg in app.flashes('success') %}
+          <p class="alert-success"><i class="fa fas-check"></i> {{msg}}</p>
+        {% endfor %}
+      </div> 
 
     {# <form action="">
         <label for="Nom">Votre Nom</label>

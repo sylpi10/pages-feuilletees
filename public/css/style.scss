@@ -332,9 +332,7 @@ nav{
 }
 
 //contact
-#contact{
-    
-}
+
 .form{
     margin-top: 220px;
     form{
@@ -350,8 +348,14 @@ nav{
             input{
                 height: 20px;
             }
-            
+            li{
+                color: red;
+            }
+            li::marker{
+                display: none;
+            }
         }
+        
         textarea{
             height: 120px;
         }
@@ -371,6 +375,15 @@ nav{
          }
      }   
     }
+
+.alert-success{
+    margin-left: 100px;
+    background-color: rgb(74, 163, 74);
+    color:#fff;
+    padding: 12px;
+    width: 300px;
+    border-radius: 8px;
+}
 }
 
 .text-detail{
@@ -385,4 +398,5 @@ nav{
         margin: auto;
     }    
 }
+
 

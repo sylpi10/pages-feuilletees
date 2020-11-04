@@ -8,7 +8,7 @@ class Contact {
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=2, max=120)
+     * @Assert\Length(min=2,  max=120)
      */
     private $name;
     
@@ -20,7 +20,7 @@ class Contact {
 
     /**
      * @Assert\NotBlank()
-     * @Assert\Length(min=10)
+     * @Assert\Length(min=5, minMessage="Le message est trop court")
      */
     private $message;
 

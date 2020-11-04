@@ -23,7 +23,7 @@ class ContactController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $email = (new TemplatedEmail())
             ->from($contact->get('email')->getData())
-            ->to('syl.pillet@hotmail.fr')
+            ->to('pilletdo@wanadoo.fr')
             ->subject("Nouveau Message depuis le site Pages Feuilletées")
             ->text($contact->get('message')->getData())
             ->context([
@@ -33,7 +33,7 @@ class ContactController extends AbstractController
             $message = "Votre message a bien été envoyé :)";
             
             $this->addFlash('success', $message);
-            return $this->redirectToRoute("home");
+            return $this->redirectToRoute("contact");
         }   
         return $this->render('contact/contact.html.twig', [
             'form' => $form->createView()
