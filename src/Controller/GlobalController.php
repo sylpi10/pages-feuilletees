@@ -113,13 +113,5 @@ class GlobalController extends AbstractController
            
         ]);
     }
-    /**
-     * @Route("/contact", name="contact")
-     */
-    public function contact(): Response
-    {
-        return $this->render('global/contact.html.twig', [
-           
-        ]);
-    }
+
 }

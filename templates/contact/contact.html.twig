@@ -9,7 +9,8 @@
 
 <div class="wrapper form">
 
-    <form action="">
+
+    {# <form action="">
         <label for="Nom">Votre Nom</label>
         <input type="text" name="" placeholder="Nom" id="nom">
         <label for="Nom">Votre Email</label>
@@ -17,8 +18,15 @@
         <label for="Message">Votre Message</label>
         <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
         {# <textarea id="mytextarea">Hello, World!</textarea> #}
+        {# <button type="submit">Envoyer</button> #}
+    {# </form>  #}
+
+    {{form_start(form)}}
+            {{form_row(form.name)}}
+            {{form_row(form.email)}}
+            {{form_row(form.message)}}
         <button type="submit">Envoyer</button>
-    </form>
+    {{form_end(form)}}
     
 </div>
 

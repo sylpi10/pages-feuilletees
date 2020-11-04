@@ -331,20 +331,31 @@ nav{
     }
 }
 
+//contact
+#contact{
+    
+}
 .form{
     margin-top: 220px;
     form{
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-        min-width: 360px;
         margin: auto;
         label{
             margin: 14px;
         }
-        input, textarea{
-            padding: 10px;
+        .contact-info{
+            display: flex;
+            flex-direction: column;
+            margin:20px auto;
+            width: 500px;
+            input{
+                height: 20px;
+            }
+            
         }
+        textarea{
+            height: 120px;
+        }
+        
      button{
          background-color: rgb(20, 154, 199);
          width: 200px;

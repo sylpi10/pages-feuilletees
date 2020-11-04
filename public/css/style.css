@@ -264,15 +264,18 @@ nav {
 .form {
   margin-top: 220px; }
   .form form {
-    display: flex;
-    flex-direction: column;
-    width: 50%;
-    min-width: 360px;
     margin: auto; }
     .form form label {
       margin: 14px; }
-    .form form input, .form form textarea {
-      padding: 10px; }
+    .form form .contact-info {
+      display: flex;
+      flex-direction: column;
+      margin: 20px auto;
+      width: 500px; }
+      .form form .contact-info input {
+        height: 20px; }
+    .form form textarea {
+      height: 120px; }
     .form form button {
       background-color: #149ac7;
       width: 200px;
