@@ -5,11 +5,9 @@
 {% block pageTitle %} {{article.name}}{% endblock %}
 {% block body %}
 
-<hr>
-    <h2>Par {{article.author}} <span>{{article.details}}</span></h2>
-<hr>
 
-<main class="wrapper page-detail">
+<main class="wrapper page-detail text-detail">
+    <h2>Par {{article.author}} <br> <span>{{article.details}}</span></h2>
     <p>{{article.content|raw}}</p>
 </main>
 
