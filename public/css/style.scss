@@ -10,13 +10,11 @@ body{
     background-color: #fcf6dc;
 
     h2{
-        width: 66%;
-        align-self: flex-end;
+        width: 50%;
+        align-self: flex-start;
         font-family: 'Freestyle';
         font-size: 2.7rem;
         color: #2f41c7;
-        margin-top: 100px;
-        margin-left: 40px;
     }
 
    h3, h4{
@@ -49,6 +47,10 @@ body{
         width: 400px;
         padding: 80px;
     }
+    h2{
+        width: 100% !important;
+        align-self: center;
+    }
 }
 
 
@@ -72,22 +74,27 @@ figcaption{
 }
 
 nav{
-    background-image: url('../images/note.png');
+    // background-image: url('../images/note.png');
+    background: url('../images/menu.png') top no-repeat;
     position: fixed;
-    width: 170px;
-    padding: 30px;
-    height: auto;
+    width: 220px;
+    background-size: cover;
+    margin-left: 8px;
+    padding:40px 30px;
     ul{
         transition: all .6s ease;
+        width: 100%;
         li{
             list-style-type: none;
-            margin: 20px auto;
+            margin: 20px 0;
             margin-left: -30px;
             color:#ccc;
+            width: 100%;
             a{
                 color: #2f41c7;
                 text-decoration: none;
                 width: 100%;
+                padding: 8px;
                 &:hover{
                     color:#ccc;
                     background-color: #2f41c7;
@@ -97,7 +104,7 @@ nav{
 }
     #burger{
         display: none;
-        float: right;
+        float: left;
         &:hover{
             cursor: pointer;
             color: orange;
@@ -106,8 +113,13 @@ nav{
 }
 
 /*home page*/
+#home-title{
+    margin-left: 5%;
+}
 .wrapper{
     text-align: center;
+    width: 90%;
+    margin: auto;
     h2{
         font-size: 2.8rem;
     }
@@ -126,13 +138,13 @@ nav{
     color: #333;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: flex-start;
     p{
         background-color: rgba(255,255,255,.7);
         padding: 20px;
         align-self: flex-end;
         width: 30%;
-        margin-right: 20px;
+        margin-left: 20px;
         font-size: 1.2rem;
         border-radius: 10px;
     }
@@ -157,12 +169,11 @@ nav{
 .articles-title-list{
     width: 90%;
     margin:50px auto;
-    padding-top: 130px;
     padding-left: 50px;
     padding-right: 50px;
-    // padding-bottom: -60px;
-    background: url('../images/paper.png') no-repeat;
+    background: url('../images/sheet.png') no-repeat;
     overflow-y: scroll;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     /*poems*/
@@ -170,19 +181,22 @@ nav{
         display: flex;
         justify-content: space-around;
         flex-wrap: wrap;
-        margin-left: 110px;
         margin-top: 60px;
-        margin-bottom: -340px;
         ul{
             margin: 10px;
             width: 42%;
             padding: 0;
             box-shadow: 2px 2px 2px rgba(47, 64, 198, .4), -2px -2px 2px rgba(47, 64, 198, .4);
             border-radius: 8px;
-            text-align: center;
+            min-width: 300px;
             li{
                 margin: 10px;
             }
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .list ul{
+            width: 80%;
         }
     }
 
@@ -206,7 +220,6 @@ nav{
         
         width: 70%;
         a{
-            background-color: rgba(255,255,255,.6);
             text-transform: uppercase;
             text-decoration: none;
             padding: 10px 20px;
@@ -216,7 +229,7 @@ nav{
             width: auto;
             &:hover{
                 color:  rgb(20, 20, 75);
-                box-shadow: 2px 2px 4px #2f41c7, -2px -2px 4px #2f41c7;
+                box-shadow: 2px 2px 4px rgba(47, 64, 198, .4), -2px -2px 4px rgba(47, 64, 198, .4);
             }
         }
         span{
@@ -239,6 +252,9 @@ nav{
 }
 
 /*poeme list*/
+.poems-list{
+    height: 1324px;
+}
 .poem-imgs{
     width: 80%;
     margin: auto;
@@ -315,7 +331,8 @@ nav{
     }
 }
 
-.contact{
+.form{
+    margin-top: 220px;
     form{
         display: flex;
         flex-direction: column;
@@ -328,7 +345,20 @@ nav{
         input, textarea{
             padding: 10px;
         }
-        
+     button{
+         background-color: rgb(20, 154, 199);
+         width: 200px;
+         padding: 12px;
+         border: 1px ridge rgb(20, 154, 199);
+         margin:30px auto;
+         color:#fff;
+         transition: background-color .5s ease;
+         &:hover{
+            background-color: transparent;
+            color: rgb(20, 154, 199);
+            cursor: pointer;
+         }
+     }   
     }
 }
 
@@ -336,6 +366,7 @@ nav{
     margin-top: 200px;
     background-color: #fff;
     background-size: auto;
+    width: 76%;
     padding: 100px;
     box-shadow: 2px 2px 4px rgb(226, 214, 214), -2px -2px 4px #ccc;
     h2{

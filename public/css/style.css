@@ -10,13 +10,11 @@ body {
   padding: 0;
   background-color: #fcf6dc; }
   body h2 {
-    width: 66%;
-    align-self: flex-end;
+    width: 50%;
+    align-self: flex-start;
     font-family: 'Freestyle';
     font-size: 2.7rem;
-    color: #2f41c7;
-    margin-top: 100px;
-    margin-left: 40px; }
+    color: #2f41c7; }
   body h3, body h4 {
     font-family: 'Raleway', 'Times New Roman', serif;
     color: #14144b; }
@@ -41,7 +39,11 @@ body {
     margin: auto;
     left: auto;
     width: 400px;
-    padding: 80px; } }
+    padding: 80px; }
+
+  h2 {
+    width: 100% !important;
+    align-self: center; } }
 hr {
   border-top: solid 1px #ccc;
   border-bottom: none;
@@ -60,35 +62,44 @@ figcaption {
   margin-bottom: 80px; }
 
 nav {
-  background-image: url("../images/note.png");
+  background: url("../images/menu.png") top no-repeat;
   position: fixed;
-  width: 170px;
-  padding: 30px;
-  height: auto; }
+  width: 220px;
+  background-size: cover;
+  margin-left: 8px;
+  padding: 40px 30px; }
   nav ul {
-    transition: all .6s ease; }
+    transition: all .6s ease;
+    width: 100%; }
     nav ul li {
       list-style-type: none;
-      margin: 20px auto;
+      margin: 20px 0;
       margin-left: -30px;
-      color: #ccc; }
+      color: #ccc;
+      width: 100%; }
       nav ul li a {
         color: #2f41c7;
         text-decoration: none;
-        width: 100%; }
+        width: 100%;
+        padding: 8px; }
         nav ul li a:hover {
           color: #ccc;
           background-color: #2f41c7; }
   nav #burger {
     display: none;
-    float: right; }
+    float: left; }
     nav #burger:hover {
       cursor: pointer;
       color: orange; }
 
 /*home page*/
+#home-title {
+  margin-left: 5%; }
+
 .wrapper {
-  text-align: center; }
+  text-align: center;
+  width: 90%;
+  margin: auto; }
   .wrapper h2 {
     font-size: 2.8rem; }
   .wrapper p {
@@ -105,13 +116,13 @@ nav {
   color: #333;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end; }
+  justify-content: flex-start; }
   .home-wrap-hero p {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
     align-self: flex-end;
     width: 30%;
-    margin-right: 20px;
+    margin-left: 20px;
     font-size: 1.2rem;
     border-radius: 10px; }
 
@@ -129,11 +140,11 @@ nav {
 .articles-title-list {
   width: 90%;
   margin: 50px auto;
-  padding-top: 130px;
   padding-left: 50px;
   padding-right: 50px;
-  background: url("../images/paper.png") no-repeat;
+  background: url("../images/sheet.png") no-repeat;
   overflow-y: scroll;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   /*poems*/ }
@@ -141,18 +152,19 @@ nav {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    margin-left: 110px;
-    margin-top: 60px;
-    margin-bottom: -340px; }
+    margin-top: 60px; }
     .articles-title-list .list ul {
       margin: 10px;
       width: 42%;
       padding: 0;
       box-shadow: 2px 2px 2px rgba(47, 64, 198, 0.4), -2px -2px 2px rgba(47, 64, 198, 0.4);
       border-radius: 8px;
-      text-align: center; }
+      min-width: 300px; }
       .articles-title-list .list ul li {
         margin: 10px; }
+  @media screen and (max-width: 1200px) {
+    .articles-title-list .list ul {
+      width: 80%; } }
   .articles-title-list h3 {
     font-family: 'freestyle';
     text-transform: uppercase; }
@@ -169,7 +181,6 @@ nav {
     font-family: 'freestyle';
     width: 70%; }
     .articles-title-list li a {
-      background-color: rgba(255, 255, 255, 0.6);
       text-transform: uppercase;
       text-decoration: none;
       padding: 10px 20px;
@@ -179,7 +190,7 @@ nav {
       width: auto; }
       .articles-title-list li a:hover {
         color: #14144b;
-        box-shadow: 2px 2px 4px #2f41c7, -2px -2px 4px #2f41c7; }
+        box-shadow: 2px 2px 4px rgba(47, 64, 198, 0.4), -2px -2px 4px rgba(47, 64, 198, 0.4); }
     .articles-title-list li span {
       margin-left: 100px; }
 
@@ -193,6 +204,9 @@ nav {
   margin: auto; }
 
 /*poeme list*/
+.poems-list {
+  height: 1324px; }
+
 .poem-imgs {
   width: 80%;
   margin: auto;
@@ -247,21 +261,36 @@ nav {
     .fav-links ul a {
       margin: 12px; }
 
-.contact form {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  min-width: 360px;
-  margin: auto; }
-  .contact form label {
-    margin: 14px; }
-  .contact form input, .contact form textarea {
-    padding: 10px; }
+.form {
+  margin-top: 220px; }
+  .form form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    min-width: 360px;
+    margin: auto; }
+    .form form label {
+      margin: 14px; }
+    .form form input, .form form textarea {
+      padding: 10px; }
+    .form form button {
+      background-color: #149ac7;
+      width: 200px;
+      padding: 12px;
+      border: 1px ridge #149ac7;
+      margin: 30px auto;
+      color: #fff;
+      transition: background-color .5s ease; }
+      .form form button:hover {
+        background-color: transparent;
+        color: #149ac7;
+        cursor: pointer; }
 
 .text-detail {
   margin-top: 200px;
   background-color: #fff;
   background-size: auto;
+  width: 76%;
   padding: 100px;
   box-shadow: 2px 2px 4px #e2d6d6, -2px -2px 4px #ccc; }
   .text-detail h2 {
