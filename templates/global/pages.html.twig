@@ -14,7 +14,6 @@
             En notes, les commentaires 2010.      
        </h2>
         <ul>
-
             {% for article in articles %}
             <li><a href="{{path('page-detail', {'id' : article.id})}}">
                 <img src="{{asset('images/arrow.png')}}" width="40" alt="Flèche">

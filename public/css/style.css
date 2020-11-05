@@ -33,17 +33,6 @@ body {
   left: 50%;
   top: -30px; }
 
-@media screen and (max-width: 1200px) {
-  #main-title {
-    position: relative;
-    margin: auto;
-    left: auto;
-    width: 400px;
-    padding: 80px; }
-
-  h2 {
-    width: 100% !important;
-    align-self: center; } }
 hr {
   border-top: solid 1px #ccc;
   border-bottom: none;
@@ -310,5 +299,52 @@ nav {
   .text-detail h2 {
     width: 80%;
     margin: auto; }
+
+@media screen and (max-width: 1200px) {
+  #main-title {
+    position: relative;
+    margin: auto;
+    left: auto;
+    width: 400px;
+    padding: 80px; }
+
+  h2 {
+    width: 100% !important;
+    align-self: center; }
+
+  .articles-title-list ul {
+    width: 100%; }
+    .articles-title-list ul li {
+      width: 100%;
+      margin-left: -60px; } }
+@media screen and (max-width: 960px) {
+  #main-title {
+    background-image: none;
+    font-size: 1.8rem;
+    margin-bottom: -50px;
+    margin-left: 20%; }
+
+  .poems {
+    width: 100%;
+    margin: 0; }
+
+  .poems-list {
+    background-color: #333; }
+    .poems-list .list {
+      width: 100%; }
+      .poems-list .list ul {
+        width: 100%; }
+        .poems-list .list ul li {
+          width: 100%; } }
+@media screen and (max-width: 600px) {
+  .articles-title-list ul {
+    width: 100%; }
+
+  .wrapper {
+    width: 100%; }
+
+  .form {
+    width: 340px;
+    margin: auto; } }
 
 /*# sourceMappingURL=style.css.map */
